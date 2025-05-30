@@ -1,0 +1,107 @@
+:root {
+  /*Custom properties*/
+  --primario: #ffc107;
+  --secundario: #0097a7;
+  --gris: #757575;
+  --blanco: white;
+  --funtePrincipal: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+* {
+}
+
+html {
+  font-size: 62.5%; /* igualar 1rem = 10px */
+}
+
+header {
+  display: flex;
+  max-width: 120rem;
+}
+
+header h1 {
+  margin: 2rem auto;
+  font-size: 4rem;
+}
+
+header h1 span {
+  color: var(black);
+  font-size: 2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.nav-bg {
+  background-color: var(--secundario);
+}
+
+.navegacion-principal {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 480px) {
+  .navegacion-principal {
+    flex-direction: row;
+  }
+}
+
+.navegacion-principal a {
+  text-decoration: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2rem;
+  margin: auto;
+  padding: 6.5px;
+  color: white;
+  justify-content: space-between;
+}
+
+.navegacion-principal a:hover {
+  background-color: var(--primario);
+  color: black;
+}
+
+.hero {
+  background-image: url(../hero.jpg);
+  background-position: center;
+  max-width: 100%;
+  height: 40rem;
+  display: flex;
+}
+
+.contenido-hero {
+  max-width: 120rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--blanco);
+  font-family: var(--funtePrincipal);
+  color: var(--blanco);
+    font-size: 3rem;
+
+}
+
+.contenido-hero h2 {
+  font-size: 3rem;
+}
+
+.contenido-hero .ubicacion {
+  display: flex;
+  flex-direction: row;
+}
+
+.contenido-hero .ubicacion p {
+  font-size: 1.5rem;
+  margin: auto;
+}
+
+.contenido-hero .boton {
+  font-size: 1.5rem;
+  color: var(--blanco);
+  text-decoration: none;
+  background-color: var(--secundario);
+  padding: 1rem 4rem;
+  border-radius: 0.5rem;
+}
