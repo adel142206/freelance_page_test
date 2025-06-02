@@ -8,7 +8,10 @@
   --funtePrincipal: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-* {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 html {
@@ -39,6 +42,26 @@ header h1 span {
   color: var(black);
   font-size: 2rem;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+input,
+textarea {
+  border-radius: 0.4rem;
+  border-style: none;
+}
+
+input,
+textarea:focus {
+  outline: none;
+}
+
+.boton {
+  font-size: 1.5rem;
+  color: var(--blanco);
+  text-decoration: none;
+  background-color: var(--secundario);
+  padding: 1rem 4rem;
+  border-radius: 0.5rem;
 }
 
 /*###################### NAVEGACION ######################*/
@@ -111,15 +134,6 @@ header h1 span {
 .contenido-hero .ubicacion p {
   font-size: 1.5rem;
   margin: auto;
-}
-
-.contenido-hero .boton {
-  font-size: 1.5rem;
-  color: var(--blanco);
-  text-decoration: none;
-  background-color: var(--secundario);
-  padding: 1rem 4rem;
-  border-radius: 0.5rem;
 }
 
 /*###################### Main ######################*/
@@ -204,7 +218,6 @@ header h1 span {
 }
 
 .formulario fieldset {
-  display: flex;
   border: none;
 }
 
@@ -215,4 +228,70 @@ header h1 span {
   justify-content: center;
   margin: 0 auto 0.5rem auto;
   padding: 1rem;
+}
+
+.contenedor-campos {
+}
+
+.campo {
+  margin: 1rem;
+}
+
+.campo label {
+  font-family: var(--funtePrincipal);
+  color: var(--blanco);
+  margin-bottom: 0.5rem;
+}
+
+.input-text {
+  height: 3rem;
+  padding: 1rem;
+  width: 100%;
+  resize: vertical;
+  overflow: auto;
+}
+
+.campo input::placeholder {
+  font-weight: 100;
+  color: #999;
+}
+
+.campo .textarea {
+  height: 6rem;
+}
+.campo .boton-submit {
+  width: 100%;
+  cursor: pointer;
+  height: 4rem;
+  margin: 1rem auto;
+  font-family: var(--funtePrincipal);
+}
+
+@media (min-width: 480px) {
+  .sectionForm {
+  }
+
+  .formulario {
+    max-width: 75%;
+    margin: 0 auto;
+  }
+
+  .contenedor-campos {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+  }
+
+  .nombre {
+    grid-column: 1/2;
+  }
+
+  .telefono {
+    grid-column: 2/3;
+  }
+
+  .correo,
+  .mensaje {
+    grid-column: 1/3;
+  }
 }
